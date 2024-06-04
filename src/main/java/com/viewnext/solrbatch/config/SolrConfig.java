@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SolrConfig {
 
-	@Bean("collectionPersonaje")
+	@Bean("collectionTarifas")
 	public SolrClient solrClient() {
-		return new HttpJdkSolrClient.Builder("http://localhost:9777/solr/personajes").build();
+		return new HttpJdkSolrClient.Builder("http://localhost:9200/solr/tarifas").build();
 	}
 }
